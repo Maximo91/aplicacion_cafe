@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity implements OnClickListener{
+public class LoginActivity extends AppCompatActivity{
 
     EditText textCorreo, textPass;
     Button botonLogin;
@@ -22,16 +22,16 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
         textCorreo = (EditText) findViewById(R.id.txtCorreo);
         textPass = (EditText) findViewById(R.id.txtPass);
         botonLogin = (Button) findViewById(R.id.btnLogin);
-        botonLogin.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
+    public void btonLogin() {
         String txtCorreo = textCorreo.getText().toString();
         String txtPass = textPass.getText().toString();
         if (txtCorreo.equals("admin") && txtPass.equals("admin")) {
             startActivity(new Intent(getApplicationContext(), HelpActivity.class));
-            } else
-                Toast.makeText(getApplicationContext(), "Usuario Inválido", Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(getApplicationContext(), "Usuario Inválido", Toast.LENGTH_SHORT).show();
     }
+
+
 }
