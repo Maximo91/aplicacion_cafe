@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">aplicacion_cafe</string>
+    <string name="textCorreo">Correo</string>
+    <string name="textPass">Contraseña</string>
+    <string name="textBtnLogin">LOGIN</string>
+    <string name="titleLogin">Ingrese a su cuenta</string>
 </resources>
