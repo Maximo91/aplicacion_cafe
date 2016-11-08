@@ -8,6 +8,78 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/ColorFondoLogin"
     tools:context="com.example.maximo.aplicacion_cafe.LoginActivity">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text= "@string/textBtnLogin"
+        android:textColor="@color/ColorBanco"
+        android:background="@color/colorPrimary"
+        android:onClick="btonLogin"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="@string/textPass"
+        android:textColorHint="@color/ColorBanco"
+        android:inputType="textPassword"
+        android:textColor="@color/ColorBanco"
+        android:selectAllOnFocus="false"
+        android:layout_alignBottom="@+id/btnLogin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="58dp" />
+
+    <EditText
+        android:id="@+id/txtCorreo"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="@string/textCorreo"
+        android:textColorHint="@color/ColorBanco"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/ColorBanco"
+        android:layout_above="@+id/txtPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Aplicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="@color/ColorBanco"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:text="@string/titleLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@color/ColorBanco"
+        android:layout_above="@+id/txtPass"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="53dp" />
 
 </RelativeLayout>
