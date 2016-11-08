@@ -1,4 +1,4 @@
-package com.example.maximo.aplicacion_cafe;
+package com.example.maximo.aplicacion_cafe.activity.admin;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.maximo.aplicacion_cafe.R;
+import com.example.maximo.aplicacion_cafe.activity.user.HelpActivityUser;
 import com.vlonjatg.android.apptourlibrary.AppTour;
 import com.vlonjatg.android.apptourlibrary.MaterialSlide;
 
@@ -45,12 +47,12 @@ public class HelpActivity extends AppTour {
 
     @Override
     public void onSkipPressed() {
-        finish();
-        }
+        //finish();
+    }
 
     @Override
     public void onDonePressed() {
-        finish();
+        startActivity(new Intent(getApplicationContext(), MenuPrincipal.class));
     }
 
 }
