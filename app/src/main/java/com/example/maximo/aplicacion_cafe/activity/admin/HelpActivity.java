@@ -47,7 +47,7 @@ public class HelpActivity extends AppTour {
 
     @Override
     public void onSkipPressed() {
-        //finish();
+        setCurrentSlide(4);
     }
 
     @Override

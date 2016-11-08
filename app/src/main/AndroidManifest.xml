@@ -15,12 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.user.MenuPrincipalUser"/>
+        <activity android:name=".activity.user.HelpActivityUser"/>
+
         <activity android:name=".LoginActivity" />
+
         <activity android:name=".activity.admin.MenuPrincipal" />
         <activity android:name=".activity.admin.HelpActivity" />
 
-        <activity android:name=".activity.user.MenuPrincipalUser"/>
-        <activity android:name=".activity.user.HelpActivityUser"/>
+
 
     </application>
 

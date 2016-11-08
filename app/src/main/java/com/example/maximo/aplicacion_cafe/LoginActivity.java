@@ -39,6 +39,11 @@ public class LoginActivity extends AppCompatActivity{
             tipoSesion = "admin";
             editor.putString("tipoSesion", tipoSesion);
             editor.commit();
+
+            SharedPreferences prefs = getSharedPreferences("Datos", MODE_PRIVATE);
+            String tipoSesion = prefs.getString("tipoSesion", "");
+            System.out.println("ACAAAAAAAAAAAAAAAA_______    "+tipoSesion);
+
             startActivity(new Intent(getApplicationContext(), HelpActivity.class));
         } else if (txtCorreo.equals("user") && txtPass.equals("user")){
             tipoSesion = "user";
