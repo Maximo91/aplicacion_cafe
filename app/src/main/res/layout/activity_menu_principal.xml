@@ -10,4 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.maximo.aplicacion_cafe.activity.admin.MenuPrincipal">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btonCerrarSesion"
+        android:onClick="btonCerrarSesion"
+        android:padding="5dp"
+        android:text="Cerrar Sesión"
+        android:background="#800000"
+        android:textColor="#FFFFFF"/>
+
 </RelativeLayout>

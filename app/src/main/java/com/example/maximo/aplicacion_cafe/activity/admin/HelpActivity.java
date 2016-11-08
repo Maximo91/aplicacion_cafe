@@ -54,5 +54,7 @@ public class HelpActivity extends AppTour {
     public void onDonePressed() {
         startActivity(new Intent(getApplicationContext(), MenuPrincipal.class));
     }
+    @Override
+    public void onBackPressed() {}
 
 }

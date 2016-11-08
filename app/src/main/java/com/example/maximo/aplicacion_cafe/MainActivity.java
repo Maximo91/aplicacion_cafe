@@ -1,7 +1,5 @@
 package com.example.maximo.aplicacion_cafe;
 
-import android.app.ActivityManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
@@ -46,15 +44,13 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+
                 SharedPreferences prefs = getSharedPreferences("Datos", MODE_PRIVATE);
                 String tipoSesion = prefs.getString("tipoSesion", "");
-                System.out.println("AQUI ==>  " + tipoSesion);
 
                 if (tipoSesion.equals("admin")) {
-                    System.out.println("ACAA ====>    " + tipoSesion);
                     startActivity(new Intent(getApplicationContext(), MenuPrincipal.class));
                 } else if (tipoSesion.equals("user")) {
-                    System.out.println("ACAA ====>    " + tipoSesion);
                     startActivity(new Intent(getApplicationContext(), MenuPrincipalUser.class));
                 } else
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
