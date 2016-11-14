@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "353854894406",
+    "project_id": "aplicacion-cafe"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353854894406:android:21e795f7dce13f3f",
+        "android_client_info": {
+          "package_name": "com.example.maximo.aplicacion_cafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353854894406-0h5f53e4c3gikqvi6ge34l8omk19ukfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maximo.aplicacion_cafe",
+            "certificate_hash": "7B07BBD6E6CC3006B57C3B335D7AB917273D6DCF"
+          }
+        },
+        {
+          "client_id": "353854894406-a2n7eisbjavckn940pt7qi8f07tvrq0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwtQykelvY-Tj-YlvtMUC_JIx5zE5X4Jc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

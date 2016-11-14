@@ -11,48 +11,6 @@
     android:background="@color/ColorFondoLogin"
     tools:context="com.example.maximo.aplicacion_cafe.LoginActivity">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text= "@string/textBtnLogin"
-        android:textColor="@color/ColorBanco"
-        android:background="@color/colorPrimary"
-        android:onClick="btonLogin"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="15dip"
-        android:paddingRight="15dip"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/txtPass"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:hint="@string/textPass"
-        android:textColorHint="@color/ColorBanco"
-        android:inputType="textPassword"
-        android:textColor="@color/ColorBanco"
-        android:selectAllOnFocus="false"
-        android:layout_alignBottom="@+id/btnLogin"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="58dp" />
-
-    <EditText
-        android:id="@+id/txtCorreo"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:hint="@string/textCorreo"
-        android:textColorHint="@color/ColorBanco"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/ColorBanco"
-        android:layout_above="@+id/txtPass"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:text="Aplicacion"
         android:layout_width="match_parent"
@@ -85,10 +43,11 @@
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:onClick="btonLoginGooglePlus"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="71dp" />
 
 </RelativeLayout>
