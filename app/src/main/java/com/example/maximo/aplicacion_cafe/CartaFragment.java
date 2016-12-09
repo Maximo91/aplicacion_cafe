@@ -77,6 +77,7 @@ public class CartaFragment extends Fragment {
         }
 
 
+
         View rootView = layoutInflater.inflate(R.layout.fragment_carta, containerG, false);
         ProductoAdapter productoAdapter = new ProductoAdapter(getContext(), R.layout.row_layout, produc_data);
         listView = (ListView) rootView.findViewById(R.id.ListViewCarta);
