@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Pedidos">
+        <menu>
+            <item
+                android:id="@+id/nav_carroDeCompra"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Carro de Compra" />
+            <item
+                android:id="@+id/nav_hisPedidos"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Historial De Pedidos" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_carta"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Carta" />
+    <item
+        android:id="@+id/nav_combo"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Combos" />
+    <item
+        android:title="Cerrar Sesión"
+        android:id="@+id/nav_LogOut"
+        />
+
+</menu>

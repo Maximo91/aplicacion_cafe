@@ -43,10 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                //startActivity(new Intent(getApplicationContext(), MenuActivity.class));
             }
         }).start();
-
-
-
     }
 }

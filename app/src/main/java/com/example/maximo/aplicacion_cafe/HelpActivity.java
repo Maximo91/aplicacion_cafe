@@ -45,11 +45,13 @@ public class HelpActivity extends AppTour {
 
     @Override
     public void onSkipPressed() {
+        startActivity(new Intent(HelpActivity.this, MenuActivity.class));
         finish();
         }
 
     @Override
     public void onDonePressed() {
+        startActivity(new Intent(HelpActivity.this, MenuActivity.class));
         finish();
     }
 

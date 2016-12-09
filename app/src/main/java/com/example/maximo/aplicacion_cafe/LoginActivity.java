@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity{
 
     EditText textCorreo, textPass;
     Button botonLogin;
+    ProgressBar progressBar;
 
     //API
     private SignInButton mGoogleBtn;
@@ -45,11 +47,7 @@ public class LoginActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        textCorreo = (EditText) findViewById(R.id.txtCorreo);
-        textPass = (EditText) findViewById(R.id.txtPass);
-        botonLogin = (Button) findViewById(R.id.btnLogin);
-
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         //API
         mGoogleBtn = (SignInButton)findViewById(R.id.sign_in_button);
@@ -59,7 +57,9 @@ public class LoginActivity extends AppCompatActivity{
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
                 if (firebaseAuth.getCurrentUser() != null){
-                    startActivity(new Intent(LoginActivity.this, LogOutActivity.class));
+                    startActivity(new Intent(LoginActivity.this, HelpActivity.class));
+                    finish();
+                    //startActivity(new Intent(getApplicationContext(), HelpActivity.class));
                 }
 
             }
@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity{
         if (txtCorreo.equals("admin") && txtPass.equals("admin")) {
             startActivity(new Intent(getApplicationContext(), HelpActivity.class));
         } else
-            Toast.makeText(getApplicationContext(), "Usuario Inválido", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Usuario No Válido", Toast.LENGTH_SHORT).show();
     }
     //Api Android
     //--------------------API Google------------------------
@@ -129,6 +129,7 @@ public class LoginActivity extends AppCompatActivity{
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
 
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
+        Toast.makeText(this, credential.toString(), Toast.LENGTH_SHORT).show();
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -139,13 +140,13 @@ public class LoginActivity extends AppCompatActivity{
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
 
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginActivity.this, "Authentication failed.",
+                              //      Toast.LENGTH_SHORT).show();
 
                         } else {
 
                             Toast.makeText(LoginActivity.this, "Login Successful.",
-                                    Toast.LENGTH_SHORT).show();
+                                   Toast.LENGTH_SHORT).show();
 
                         }
 
@@ -154,7 +155,6 @@ public class LoginActivity extends AppCompatActivity{
 
     }
 //--------------------API Google------------------------
-
 }
 
 
